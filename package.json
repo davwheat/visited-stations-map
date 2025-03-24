@@ -8,14 +8,14 @@
     "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md,less,mdx,html,css}\"",
     "format:check": "prettier --check \"**/*.{js,jsx,ts,tsx,json,md,less,mdx,html,css}\""
   },
-  "packageManager": "yarn@4.3.1",
+  "packageManager": "yarn@4.7.0",
   "dependencies": {
-    "csv": "^6.3.9"
+    "csv": "^6.3.11"
   },
   "devDependencies": {
-    "@cloudflare/workers-types": "^4.20240620.0",
-    "prettier": "^3.3.2",
-    "typescript": "^5.5.3",
-    "wrangler": "^3.63.1"
+    "@cloudflare/workers-types": "^4.20250321.0",
+    "prettier": "^3.5.3",
+    "typescript": "^5.8.2",
+    "wrangler": "^4.4.0"
   }
 }

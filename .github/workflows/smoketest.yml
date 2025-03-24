@@ -70,7 +70,7 @@ jobs:
           accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
           projectName: ${{ vars.CLOUDFLARE_PAGES_PROJECT }}
           directory: html
-          wranglerVersion: '3'
+          wranglerVersion: '4'
           # Use PR head branch if available, otherwise use the current branch
           branch: ${{ github.event_name == 'pull_request' && github.event.pull_request.head.ref || github.ref_name }}
 
