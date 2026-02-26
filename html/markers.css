@@ -186,3 +186,13 @@
   --type-color: #3949c1;
   --type-color-fg: white;
 }
+
+[data-mode-type='bus'] {
+  --type-color: #ffce28;
+  --type-color-fg: black;
+}
+
+[data-mode-type='cable-car'] {
+  --type-color: #fea3ff;
+  --type-color-fg: black;
+}
