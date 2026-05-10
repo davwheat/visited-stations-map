@@ -31,15 +31,12 @@ You'll need a Cloudflare account for this unless you change how the project work
 [Cloudflare](https://dash.cloudflare.com/sign-up), and usage should happily fit within your free usage limits. You don't need to add a payment
 method to use Cloudflare Pages.
 
-1.  Fork and update repository and code
-
-    2. [Fork this repository](https://github.com/davwheat/visited-stations-map/fork)
-    3. On your fork, enable Actions through the Actions tab
+1.  Fork and update repository and code 2. [Fork this repository](https://github.com/davwheat/visited-stations-map/fork) 3. On your fork, enable
+    Actions through the Actions tab
 
 2.  Create a clone of my [Google Sheet](https://docs.google.com/spreadsheets/d/1ZRBE-9i4_WmMmO5h1pIMwrF1owW95Qc-ElLcmf0ct3g/edit) and start
     filling it in with your own data
 3.  Update code as required
-
     1.  Update the Google Sheet ID in [`functions/api/stations.ts`](functions/api/stations.ts)
     2.  You will also need to update the [`html/map.js`](html/map.js) file to use the default OSM raster tile server by swapping the lines
         specified in the code comments. By default, it will attempt to use my own self-hosted vector tile server, which will not work for you.
