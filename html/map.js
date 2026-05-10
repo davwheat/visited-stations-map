@@ -6,10 +6,18 @@ if (showFuture) {
   swapUrl.searchParams.set('future', 'true')
 }
 
+const mediaForDarkMode = window.matchMedia('(prefers-color-scheme: dark)')
+
+function getStyleForMode(isDarkMode) {
+  return isDarkMode
+    ? 'https://osm-assets.coveragetiles.com/modern_rail_dark.min.json'
+    : 'https://osm-assets.coveragetiles.com/modern_rail_light.min.json'
+}
+
 const map = new maplibregl.Map({
   container: 'map',
   // Comment the line below and uncomment the line below that to use the free OSM raster tile service
-  style: '/map-styles/osm-bright-style.json',
+  style: getStyleForMode(mediaForDarkMode.matches),
   // style: '/map-styles/osm-raster.json',
   center: [4.39097, 54.64657],
   zoom: 12,
@@ -38,6 +46,10 @@ const map = new maplibregl.Map({
       unit: 'metric',
     }),
   )
+
+mediaForDarkMode.addEventListener('change', ({ matches }) => {
+  map.setStyle(getStyleForMode(matches))
+})
 
 map.touchZoomRotate.disableRotation()
 
